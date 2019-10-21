@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Johninch
+title: JohninchのBlog
 subtitle: Inch
 description: 张宇驰的博客主页
-keywords: FED, Juve
+keywords: [FED, Juve]
 author: Johninch
-language: zh-CN
+language: zh-Hans
 timezone: UTC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://johninch.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -73,7 +73,29 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: nexmoe-johninch
+theme: melody
+
+Plugins:
+  - hexo-algoliasearch
+
+algolia: 
+  appId: "0XJEPPY0XU"
+  apiKey: "e06877afb5799837e43083eaa72dae92"
+  adminApiKey: "c31a8f09d9411ecda8bd20aef96bb600"
+  chunkSize: 5000
+  indexName: "inch-blog"
+  fields:
+    - content:strip:truncate,0,500
+    - excerpt:strip
+    - title
+    - tags
+    - categories
+    - slug
+    - gallery
+    - slides
+    - permalink
+    - path
+    - contentStripTruncate
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
