@@ -268,6 +268,9 @@ busuanzi:
 # ---------------
 links_title: Links   # 配置友链的标题文字
 links:
+  Roundtable-io: https://https://johninch.github.io/Roundtable/
+  Roundtable-repo: https://github.com/johninch/Roundtable
+  ESOP-FED: https://github.com/esop-fed
   Caleb: https://dannisi.github.io/
   niannings: https://niannings.github.io/
   Xmtd: https://Xmtd.github.io/
