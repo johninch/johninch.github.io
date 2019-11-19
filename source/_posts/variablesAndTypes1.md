@@ -1,5 +1,5 @@
 ---
-title: JS专题-变量与类型-（1）js数据类型
+title: JS专题-变量与类型-（1）JS数据类型
 date: 2019-11-13 14:34:33
 tags: [前端基础, 变量, 数据类型]
 categories: javascript
@@ -7,7 +7,7 @@ categories: javascript
 
 > 本文是在 ConardLi的“[【JS 进阶】你真的掌握变量和类型了吗](https://juejin.im/post/5cec1bcff265da1b8f1aa08f)”文章上的总结和扩展，集中记述了js中的变量和数据类型的相关知识点及应用场景，共分为5部分。
 
-> 本文为“JS专题-变量与类型”的第一篇，1）js数据类型，主要关注js中变量在内存中的具体存储形式。
+> 本文为“JS专题-变量与类型”的第一篇，1）JS数据类型，主要关注JS中变量在内存中的具体存储形式。
 
 ## JavaScript数据类型
 
