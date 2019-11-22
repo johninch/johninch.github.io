@@ -9,6 +9,8 @@ categories: javascript
 
 > 本文为“JS专题-变量与类型”的第一篇，1）JS数据类型，主要关注JS中变量在内存中的具体存储形式。
 
+<!-- more -->
+
 ## JavaScript数据类型
 
 ### 数据类型分类
