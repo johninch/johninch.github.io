@@ -154,6 +154,32 @@ function deleteDuplication(pHead) {
 
   return dummy.next;
 }
+
+function duplicateDelete(list){
+    let pre = list;
+    let cur = list.next;
+    let next = cur.next;
+    let flag = false;// 用于标志当前节点和下一节点值是否重复
+
+    while(next){
+        if(cur.value === next.value){ // 删除重复的节点
+            flag = true;
+            next = next.next;
+            cur.next = next;
+        } else{
+            if(flag){ // 不保留重复节点时，要把保留的一个重复节点删除
+                cur = next;
+                next = cur.next;
+                pre.next = cur;
+                flag = false;
+            } else{
+                pre = next;
+                cur = next
+                next = next.next;
+            }
+        }
+    }
+}
 ```
 
 ### 合并两个有序链表
@@ -238,17 +264,38 @@ function merge(p1, p2) {
 输入一个链表，反转链表后，输出新链表的表头。
 
 #### 2、思路
-有两种方法可以实现：（1）链表头插法。从第二个节点开始依次插入到第一个节点之后，最后将第一个节点挪到新表结尾；（2）三指针。使用三个指针，分别指向当前遍历到的结点、它的前一个结点以及后一个结点。将指针反转后，三个结点依次前移即可；（3）递归方法。同样可以采用递归来实现反转。将头结点之后的链表反转后，再将头结点接到尾部即可。
-
-<img src="/images/linkedList/reverseLinkList1.jpeg" alt="链表头插法" style="width:400px;"/>
+有两种方法可以实现：（1）三指针（原地反转）。使用三个指针，分别指向当前遍历到的结点、它的前一个结点以及后一个结点。将指针反转后，三个结点依次前移即可；（2）链表头插法(注意这里是往head后插)。从第二个节点开始依次插入到第一个节点之后，最后将第一个节点挪到新表结尾；（3）递归方法。同样可以采用递归来实现反转。将头结点之后的链表反转后，再将头结点接到尾部即可。
 
 <img src="/images/linkedList/reverseLinkList2.png" alt="三指针法" style="width:400px;"/>
 
+<img src="/images/linkedList/reverseLinkList1.jpeg" alt="链表头插法" style="width:400px;"/>
 
 #### 3、代码实现
 
 ```js
 // https://blog.csdn.net/feliciafay/article/details/6841115
+
+// ”三指针法“：使用p、q 两个节点间的指向反向，同时用 临时指针r 来记录剩下的链表
+// 链表原地操作，时间复杂度是 O(N)，但是空间复杂度只有 O(1)
+function reverseList(head) {
+  if (head === null || head.next === null) {    // 链表为空或只有一个节点时，不用反转
+    return head;
+  }
+  let p = head
+  let q = head.next;
+  head.next = null;    // 让原本的head变为尾节点
+
+  let r;    // 临时指针
+  while (q) { // 当q为null时，反转完毕
+    r = q.next; // 保留下一个step要处理的指针
+    q.next = p; // 这一步使p、q的指向反向
+
+    p = q; // p、q后移
+    q = r;
+  }
+
+  return p; // 此时 p 就是反转后链表的 头结点
+}
 
 // ”链表头插法“：从第2个节点到第N个节点，依次逐节点插入到第1个节点(head节点)之后，最后将第一个节点挪到新表的表尾。
 // 时间复杂度是 O(N)，空间复杂度也是 O(N)
@@ -273,28 +320,6 @@ function reverseList(head) {
   return head
 }
 
-
-// ”三指针法“：使用p、q 两个节点间的指向反向，同时用 临时指针r 来记录剩下的链表
-// 链表原地操作，时间复杂度是 O(N)，但是空间复杂度只有 O(1)
-function reverseList(head) {
-  if (head === null || head.next === null) {    // 链表为空或只有一个节点时，不用反转
-    return head;
-  }
-  let p = head
-  let q = head.next;
-  head.next = null;    // 让原本的head变为尾节点
-
-  let r;    // 临时指针
-  while (q) { // 当q为null时，反转完毕
-    r = q.next; // 保留下一个step要处理的指针
-    q.next = p; // 这一步使p、q的指向反向
-
-    p = q; // p、q后移
-    q = r;
-  }
-
-  return p; // 此时 p 就是反转后链表的 头结点
-}
 
 // ”递归“：对于树的大部分问题，基本可以考虑用递归来解决。但是我们不太熟悉的一点是，对于单链表的一些问题，也可以使用递归。
 // 可以认为单链表是一颗永远只有左(右)子树的树，因此可以考虑用递归来解决:
@@ -520,7 +545,8 @@ function detectCycle(head) {
   // 设定head到入环点为n，假设环路大于n，环内路被分为b与n。
   // 慢指针从入环处开始跑b步，距离入环处就剩下了n。
   // 此时，快指针则是从距离入环处n步远的位置开始跑了2b步，距离入环处也是剩下了n。
-  // 由于距离入环处都是n，所以他们相遇了，这个点就是firstMeet
+  // 慢指针在圈内b的位置，快指针在圈内n+2b（减去圈长n+b也是b的位置），位置相同
+  // 所以他们相遇了，距离入环处都是n，这个点就是firstMeet
   // 所以最后，使用两个slow指针，一个从head出发，一个从firstMeet出发，都走n步，相遇，返回从head出发的slow即可
   // 另外，对于环路小于n的情况，则可将多个小环展开视为一个大环，情况是一样的
   while(firstMeet && head) {
