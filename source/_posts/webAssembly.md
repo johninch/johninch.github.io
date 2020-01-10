@@ -1,7 +1,7 @@
 ---
 title: 初探 webAssembly
 date: 2020-01-10 11:07:26
-tags: 前沿 webAssembly wasm
+tags: [前沿, webAssembly, wasm]
 ---
 
 > 12月初，W3C联盟正式推荐其为Web语言。WebAssembly 成为了继 HTML、CSS 和 JavaScript 之后的第四大Web语言。虽然如此，WebAssembly 还没有真正站稳脚跟。本文就待着好奇认识一下它，并摘录一些关键点。

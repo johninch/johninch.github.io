@@ -1,7 +1,7 @@
 ---
 title: CORS（Cross-origin resource sharing）跨域资源共享
 date: 2019-12-25 18:48:17
-tags: HTTP 浏览器 跨域 预检请求
+tags: [HTTP, 浏览器, 跨域, 预检请求]
 ---
 
 > 本文主要说明 跨域资源共享CORS 的原理及相关配置，主要涉及的知识点有： 简单请求、非简单请求、预检请求（preflight）。
