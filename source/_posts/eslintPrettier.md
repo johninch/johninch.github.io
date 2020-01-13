@@ -1,6 +1,7 @@
 ---
 title: eslint+husky+prettier+lint-staged
 date: 2019-12-12 15:10:11
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [代码检查, 团队成长, eslint, prettier, husky]
 categories: 工程化
 ---

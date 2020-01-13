@@ -1,6 +1,7 @@
 ---
 title: linkedList
 date: 2019-12-17 18:57:02
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [算法, 数据结构, 链表, leetcode]
 categories: javascript
 ---

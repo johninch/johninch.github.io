@@ -1,6 +1,7 @@
 ---
 title: JS专题-变量与类型-（2）JS 3种疑难基础类型
 date: 2019-11-14 19:56:00
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [前端基础, 变量, 数据类型]
 categories: javascript
 ---

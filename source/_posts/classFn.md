@@ -1,6 +1,7 @@
 ---
 title: ES6的类 与 ES5的构造函数
 date: 2020-01-06 14:40:35
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [ES6, 原型链, 类与继承]
 ---
 

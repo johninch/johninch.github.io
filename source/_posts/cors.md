@@ -1,6 +1,7 @@
 ---
 title: CORS（Cross-origin resource sharing）跨域资源共享
 date: 2019-12-25 18:48:17
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [HTTP, 浏览器, 跨域, 预检请求]
 ---
 

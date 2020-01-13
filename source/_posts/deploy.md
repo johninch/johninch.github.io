@@ -1,6 +1,7 @@
 ---
 title: 前端工程化部署deploy
 date: 2020-01-13 17:53:03
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [线上部署流程, nginx原理, cdn原理, CI/CD配置]
 ---
 

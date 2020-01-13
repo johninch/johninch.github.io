@@ -1,6 +1,7 @@
 ---
 title: JS专题-变量与类型-（4）JS的类型转换
 date: 2019-11-21 11:03:52
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [前端基础, 变量, 数据类型, 类型转换]
 categories: javascript
 ---

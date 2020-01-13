@@ -1,6 +1,7 @@
 ---
 title: JS专题-变量与类型-（3）JS 其他引用类型
 date: 2019-11-18 15:10:11
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [前端基础, 变量, 数据类型, 装箱拆箱]
 categories: javascript
 ---

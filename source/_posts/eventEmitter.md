@@ -1,6 +1,7 @@
 ---
 title: EventEmitter实现
 date: 2019-10-28 19:27:06
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [FE, 前端知识点, node]
 ---
 

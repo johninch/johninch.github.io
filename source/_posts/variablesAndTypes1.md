@@ -1,6 +1,7 @@
 ---
 title: JS专题-变量与类型-（1）JS数据类型
 date: 2019-11-13 14:34:33
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [前端基础, 变量, 数据类型]
 categories: javascript
 ---
