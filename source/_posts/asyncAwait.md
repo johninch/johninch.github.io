@@ -1,6 +1,7 @@
 ---
 title: async/await 用法整理
 date: 2019-10-29 21:04:44
+top_img: https://source.unsplash.com/user/johninch/likes/1600x900
 tags: [ES6, 异步]
 categories: javascript
 ---
